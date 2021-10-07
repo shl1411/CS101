@@ -34,6 +34,36 @@ def reverse_complement(dna):
             rna = rna + 'A'
     return rna
 print (reverse_complement(dna))
+#
+from math import comb
+def mendels_law(hom, het, rec):
+    p_total = 0
+    p_total += (comb(hom,2) + (3/4)*comb(het,2))
+    p_total += hom*het + hom*rec
+    p_total += (1/2)*het*rec
+    counter = comb(hom,2) + comb(het,2) + comb(rec,2) + hom*het + hom*rec + het*rec
+    return p_total/counter
+
+#
+def fibonacci_rabbits(n,k):
+    if n == 1:
+        return 1
+    elif n == 2:
+        return 1
+    else:
+        return fibonacci_rabbits(n-1,k) + k * fibonacci_rabbits(n-2,k)
+#
+def gc_content(dna_list):
+    n = ' '
+    for i in dna_list:
+        i_count = i.count('G')+i.count('C')
+        n_count = n.count('G')+n.count('C')
+        if i_count/len(i) > n_count/len(n):
+            n = i
+            n_count = n.count('G')+n.count('C')
+    percentage = n_count/len(n)*100
+    return (dna_list.index(n), percentage)
+
 
 #rna2codon
 def rna2codon(triplet):

@@ -64,8 +64,7 @@ def fibonacci_rabbits(n,k):
     else:
         return fibonacci_rabbits(n-1,k) + k * fibonacci_rabbits(n-2,k)
 
-def 
-_content(dna_list):
+def GC_content(dna_list):
     n = ' '
     n_count = 0
     for i in dna_list:

@@ -110,7 +110,7 @@ def  hamming_dist(dna1, dna2):
             continue
     return hammingdistance
 
-def splice_rna2(dna, intron_list): 
+def splice_rna(dna, intron_list): 
     for intron in intron_list:
         dna=dna.replace(intron,"")
     protein_str=''

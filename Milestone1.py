@@ -92,10 +92,10 @@ def rna2codon(rna):
     protein=''
     for i in range(0,len(rna),3):
         codon= rna[i:i+3]
-        if codon in genetic_code:
+        if (codon in genetic_code):
+            if (genetic_code[codon]) == '*':
+                return protein
             protein+= (genetic_code[codon])
-        elif (genetic_code[codon]) == '*':
-            return protein
         else:
             continue
     return protein

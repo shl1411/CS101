@@ -34,17 +34,26 @@ def reverse_complement(dna):
             rna = rna + 'A'
     return rna
 
-#
-#from math import comb
-#def mendels_law(hom, het, rec):
- #   def comb(x,k):
- #       result = ()
- #   p_total = 0 #initial value for total probability
- #   p_total += (comb(hom,2) + (3/4)*comb(het,2))
- #   p_total += hom*het + hom*rec
- #   p_total += (1/2)*het*rec
- #   counter = comb(hom,2) + comb(het,2) + comb(rec,2) + hom*het + hom*rec + het*rec
- #   return p_total/counter
+def mendels_law(hom, het, rec):
+    def comb(n,k):
+        a = 1
+        b = 1
+        c = 1
+        for i in range(1,n+1):
+            a = a*i
+        for i in range(1,k+1):
+            b = b*i
+        for i in range(1,n-k+1):
+            c = c*i
+        result = a/(b*c)
+        return result
+    p_total = 0 #initial value for total probability
+    p_total += (comb(hom,2) + (3/4)*comb(het,2))
+    p_total += hom*het + hom*rec
+    p_total += (1/2)*het*rec
+    counter = comb(hom,2) + comb(het,2) + comb(rec,2) + hom*het + hom*rec + het*rec
+    return p_total/counter
+
 
 #fibonacci_rabbits
 def fibonacci_rabbits(n,k):

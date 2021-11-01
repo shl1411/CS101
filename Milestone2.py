@@ -54,7 +54,7 @@ def get_edges(dna_dict):
                 continue
             elif dna_dict[key][-3:] == dna_dict[n][0:3]:
                 adj_list.append((key,n))
-                print(dna_dict[key][-3:],dna_dict[n][0:3])
+                #print(dna_dict[key][-3:],dna_dict[n][0:3])
     return adj_list
 
 import itertools

@@ -43,7 +43,8 @@ def shared_motif(dna_list):
             motif.append(test)             #sets new longest substring, increments size
             size+=1                #we don't need to keep checking for substrings of the same length
             a=0
-     if motif == []:
+    motiff = motif[0]
+    if motif == []:
         motiff == []
     else:
         for i in range(len(motif)):

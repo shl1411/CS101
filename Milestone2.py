@@ -98,3 +98,5 @@ def random_genome(dna, gc_content):
         log_ans=math.log(ans,10)        #not sure if we need to round or not
         ans_list.append(log_ans)
     return ans_list 
+def rev_palindrome(dna):
+    return 0

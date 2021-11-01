@@ -41,6 +41,7 @@ def shared_motif(dna_list):
             motif=test             #sets new longest substring, increments size
             size+=1                #we don't need to keep checking for substrings of the same length
             a=0
+            print(motif)
     return motif 
 
 def get_edges(dna_dict):

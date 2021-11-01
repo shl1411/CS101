@@ -1,5 +1,5 @@
 #milestone2
-def find_splice(dna, dna_motif):
+def find_splice(dna_motif, dna):
     position = []
     count = 0
     for l in dna_motif:
@@ -8,9 +8,9 @@ def find_splice(dna, dna_motif):
                 position.append(dna.index(i)+count)
                 count = dna.index(i) + count+1
                 dna = dna[dna.index(i)+1:]
-            else:
-                position = []
                 break
+    if count != len(dna_motif):
+        position = []
     return position
 #================================================================
 

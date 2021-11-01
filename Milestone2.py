@@ -20,6 +20,7 @@ def find_splice(dna_motif, dna):
 def func(i):
     return len(i)
 def shared_motif(dna_list):
+    print(dna_list)
     dna_list.sort(key=func)     #sort list by length of element
     short=dna_list[0]           #shortest string
     motif=''                    #aggregator

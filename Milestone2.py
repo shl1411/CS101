@@ -23,7 +23,7 @@ def func(i):
 def shared_motif(dna_list):
     dna_list.sort(key=func)     #sort list by length of element
     short=dna_list[0]           #shortest string
-    motif=''                    #aggregator
+    motif=[]                    #aggregator
     a=0                         #start index
     size=1                      #size of test substring
     while size<= len(short):
@@ -40,15 +40,16 @@ def shared_motif(dna_list):
             a+=1
             continue
         else:
-            motif=test             #sets new longest substring, increments size
+            motif.append(test)             #sets new longest substring, increments size
             size+=1                #we don't need to keep checking for substrings of the same length
             a=0
-            motiff = motif[0]
-    for i in motif:
-        if len(motiff) < len(motif(i)):
-            motiff = motif(i)
+    motiff = motif[0]
+    for i in range(len(motif)):
+        if len(motiff) < len(motif[i]):
+            motiff = motif[i]
         else:
             continue
+    print(motif)
     return motiff
 
 def get_edges(dna_dict):

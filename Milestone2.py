@@ -1,5 +1,5 @@
 #milestone2
-def find_splice(dna_motif, dna):
+def find_splice(dna, dna_motif):
     position = []
     count = 0
     for l in dna_motif:

@@ -8,7 +8,6 @@ def find_splice(dna_motif, dna):
                 position.append(dna.index(i)+count)
                 count = dna.index(i) + count+1
                 dna = dna[dna.index(i)+1:]
-                break
             else:
                 position = []
                 break

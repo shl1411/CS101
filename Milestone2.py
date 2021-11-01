@@ -20,9 +20,7 @@ def find_splice(dna_motif, dna):
 def func(i):
     return len(i)
 def shared_motif(dna_list):
-    print(dna_list)
-    dna_list.sort(key=func)     #sort list by length of element
-    short=dna_list[0]           #shortest string
+    short=min(dna_list,key=len)           #shortest string
     motif=''                    #aggregator
     a=0                         #start index
     size=1                      #size of test substring
@@ -43,8 +41,7 @@ def shared_motif(dna_list):
             motif=test             #sets new longest substring, increments size
             size+=1                #we don't need to keep checking for substrings of the same length
             a=0
-    #print(motif)
-    return motif
+    return motif 
 
 def get_edges(dna_dict):
     adj_list = []

@@ -24,6 +24,7 @@ def get_dict(dna_dict):
 
 
 def assemble_genome2(dna_dict):
+    adj_dict = get_dict(dna_dict)
     count = 0
     dna = ''
     real = ''

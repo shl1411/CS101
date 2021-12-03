@@ -5,14 +5,6 @@ def load_file(filename):
     dna_dict=data.split('\n')
     return dna_dict
 
-def get_edges(dna_dict):
-    adj_list = []
-    for key in dna_dict:
-        for n in dna_dict:
-            if dna_dict[dna_dict.index(key)][-8:] == dna_dict[dna_dict.index(n)][0:8]:
-                adj_list.append((dna_dict.index(key),dna_dict.index(n)))
-                #print(dna_dict[key][-3:],dna_dict[n][0:3])
-    return adj_list
 adj_dict = {}
 def get_dict(dna_dict):
     
@@ -21,7 +13,6 @@ def get_dict(dna_dict):
             if dna_dict[dna_dict.index(key)][-8:] == dna_dict[dna_dict.index(n)][0:8]:
                 adj_dict[key] = n
     return adj_dict
-
 
 def assemble_genome2(dna_dict):
     adj_dict = get_dict(dna_dict)

@@ -26,6 +26,7 @@ def get_dict(dna_dict):
 def assemble_genome2(dna_dict):
     count = 0
     dna = ''
+    real = ''
     for str in dna_dict:
         while count <  len(dna_dict):
             if str not in adj_dict and count+1 < len(dna_dict):

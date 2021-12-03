@@ -40,4 +40,4 @@ def assemble_genome(dna_dict):
             dna += adj_dict[str][8:]
             count += 1
             str = adj_dict[str]
-print(len(real))
+    return real

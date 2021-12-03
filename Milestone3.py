@@ -31,7 +31,7 @@ def assemble_genome2(dna_dict):
             elif count == 0:    #for the first one in the dna chain, add the whole string
                 dna += str
             #print(str)
-            dna += adj_dict[str][8:].  #add the fragment, from the 8th index till the end to the 'dna' string
+            dna += adj_dict[str][8:]  #add the fragment, from the 8th index till the end to the 'dna' string
             count += 1
             str = adj_dict[str]
         if break_out_flag:

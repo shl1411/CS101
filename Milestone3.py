@@ -19,6 +19,7 @@ def assemble_genome2(dna_dict):
     count = 0
     dna = ''
     real = ''
+    break_out_flag = False
     for str in dna_dict:   #str is a dna fragment, loop through all the str in the list
         while count <  len(dna_dict):
             if str not in adj_dict and count+1 < len(dna_dict):    #if str does not have a corresponding pair, reset the dna string and break
